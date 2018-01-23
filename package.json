@@ -1,0 +1,65 @@
+{
+  "name": "nome-do-projeto",
+  "version": "0.3.0",
+  "description": "Aqui vai uma pequena descrição do projeto",
+  "main": "index.js",
+  "homepage": "https://github.com/leonardothibes/nome-do-projeto#readme",
+  "author": "Leonardo Thibes <leonardothibes@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardothibes/nome-do-projeto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leonardothibes/nome-do-projeto/issues"
+  },
+  "keywords": [
+    "skeleton"
+  ],
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint --config .jshintrc *.js ./lib/*.js",
+    "test": "./node_modules/.bin/mocha test --recursive --reporter dot",
+    "testdox": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test -- --recursive --reporter spec",
+    "coverage": "[ -d coverage ] || npm run testdox ; google-chrome coverage/lcov-report/index.html",
+    "clean": "rm -Rf node_modules coverage .vscode *.log test.js",
+    "postpublish": "git push origin master && git push --tags",
+    "help": "npm-help"
+  },
+  "scriptHelp": {
+    "install": {
+      "usage": "npm install",
+      "desc": "Instala as dependências externas"
+    },
+    "lint": {
+      "desc": "Roda o verificador de sintaxe"
+    },
+    "test": {
+      "desc": "Roda a suite de testes"
+    },
+    "testdox": {
+      "desc": "Roda a suite de testes com relatório"
+    },
+    "coverage": {
+      "desc": "Abre no Chrome o relatório de coverage"
+    },
+    "clean": {
+      "desc": "Remove as dependências externas"
+    },
+    "publish": {
+      "usage": "npm publish",
+      "desc": "Publica uma nova versão no repositório NPM"
+    },
+    "help": {
+      "desc": "Exibe esta mensagem de HELP"
+    }
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.5",
+    "mocha": "^4.0.1",
+    "npm-script-help": "^1.0.0",
+    "unit.js": "^2.0.0"
+  }
+}

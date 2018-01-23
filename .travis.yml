@@ -1,0 +1,14 @@
+language: node_js
+
+os:
+    - linux
+
+node_js:
+    - node
+    - lts/*
+
+script:
+    - npm run testdox
+
+notifications:
+    email: false

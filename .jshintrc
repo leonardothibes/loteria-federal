@@ -1,0 +1,36 @@
+// Reference: http://jshint.com/docs/options
+// Problems: https://jslinterrors.com
+{
+  "node": true,
+  "strict": true,
+  "undef": false,
+  "unused": false,
+  "curly": true,
+  "latedef": false,
+  "loopfunc": true,
+  "quotmark": "single",
+  "esversion": 6,
+  "globals": {
+
+    // Node.js
+    "__dirname": true,
+    "process": true,
+    "global": true,
+    "require": true,
+    "exports": true,
+    "module": true,
+    "console": true,
+    // Node.js
+
+    // Unit.js/Mocha
+    "afterEach": false,
+    "beforeEach": false,
+    "describe": false,
+    "before": false,
+    "expect": false,
+    "after": false,
+    "test": false,
+    "it": false
+    // Unit.js/Mocha
+  }
+}
