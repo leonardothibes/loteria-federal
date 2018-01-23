@@ -1,4 +1,4 @@
-# Loteria Federal [![NPM Package](https://badge.fury.io/js/loteria-federal.svg)](https://www.npmjs.com/package/loteria-federal) ![Downloads](https://img.shields.io/npm/dm/loteria-federal.svg) [![Build Status](https://secure.travis-ci.org/leonardothibes/loteria-federal.png)](http://travis-ci.org/leonardothibes/loteria-federal) [![Package Quality](http://npm.packagequality.com/shield/loteria-federal.svg)](http://packagequality.com/#?package=loteria-federal)
+# Loteria Federal [![npm](http://img.shields.io/npm/v/loteria-federal.svg)](https://www.npmjs.com/package/loteria-federal) ![Downloads](https://img.shields.io/npm/dm/loteria-federal.svg) [![Build Status](https://secure.travis-ci.org/leonardothibes/loteria-federal.png)](http://travis-ci.org/leonardothibes/loteria-federal) [![Package Quality](http://npm.packagequality.com/shield/loteria-federal.svg)](http://packagequality.com/#?package=loteria-federal) [![License](https://img.shields.io/npm/l/loteria-federal.svg)](LICENSE)
 
 Consulta o resultado da última extração da loteria federal.
 
