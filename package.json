@@ -1,6 +1,6 @@
 {
   "name": "loteria-federal",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Consulta o resultado da última extração da loteria federal",
   "main": "index.js",
   "homepage": "https://github.com/leonardothibes/loteria-federal#readme",
