@@ -3,7 +3,7 @@
 /**
  * Consulta o resultado.
  *
- * @returns {Promise}
+ * @return {Promise}
  */
 exports.fetch = function()
 {
