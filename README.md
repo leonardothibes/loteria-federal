@@ -1,12 +1,12 @@
-# NPM Skeleton [![NPM Package](https://badge.fury.io/js/[nome-do-projeto].svg)](https://www.npmjs.com/package/[nome-do-projeto]) ![Downloads](https://img.shields.io/npm/dm/[nome-do-projeto].svg) [![Build Status](https://secure.travis-ci.org/leonardothibes/[nome-do-projeto].png)](http://travis-ci.org/leonardothibes/[nome-do-projeto]) [![Package Quality](http://npm.packagequality.com/shield/[nome-do-projeto].svg)](http://packagequality.com/#?package=[nome-do-projeto])
+# Loteria Federal [![NPM Package](https://badge.fury.io/js/loteria-federal.svg)](https://www.npmjs.com/package/loteria-federal) ![Downloads](https://img.shields.io/npm/dm/loteria-federal.svg) [![Build Status](https://secure.travis-ci.org/leonardothibes/loteria-federal.png)](http://travis-ci.org/leonardothibes/loteria-federal) [![Package Quality](http://npm.packagequality.com/shield/loteria-federal.svg)](http://packagequality.com/#?package=loteria-federal)
 
-Aqui vai uma pequena descrição do projeto, falando um pouco sobre seu propósito e os problemas que ele se propõe a resolver.
+Consulta o resultado da última extração da loteria federal.
 
 Installation
 ------------
 
 ```bash
-npm install [nome-do-projeto] --save
+npm install loteria-federal --save
 ```
 
 Examples

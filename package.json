@@ -1,20 +1,23 @@
 {
-  "name": "nome-do-projeto",
-  "version": "0.3.0",
-  "description": "Aqui vai uma pequena descrição do projeto",
+  "name": "loteria-federal",
+  "version": "0.1.0",
+  "description": "Consulta o resultado da última extração da loteria federal",
   "main": "index.js",
-  "homepage": "https://github.com/leonardothibes/nome-do-projeto#readme",
+  "homepage": "https://github.com/leonardothibes/loteria-federal#readme",
   "author": "Leonardo Thibes <leonardothibes@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leonardothibes/nome-do-projeto.git"
+    "url": "git+https://github.com/leonardothibes/loteria-federal.git"
   },
   "bugs": {
-    "url": "https://github.com/leonardothibes/nome-do-projeto/issues"
+    "url": "https://github.com/leonardothibes/loteria-federal/issues"
   },
   "keywords": [
-    "skeleton"
+    "loteria",
+    "loterias",
+    "loteria federal",
+    "caixa"
   ],
   "scripts": {
     "lint": "./node_modules/.bin/jshint --config .jshintrc *.js ./lib/*.js",
