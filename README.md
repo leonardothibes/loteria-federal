@@ -29,7 +29,7 @@ loteria.fetch()
     // {
     //    "concurso": "05251",
     //    "data"    : "20/01/2018",
-    //    "premiacao": [
+    //    "premios" : [
     //        {
     //            "premio": "1",
     //            "numero": "58652",
