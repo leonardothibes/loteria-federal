@@ -1,38 +1,73 @@
 # Loteria Federal [![npm](http://img.shields.io/npm/v/loteria-federal.svg)](https://www.npmjs.com/package/loteria-federal) ![Downloads](https://img.shields.io/npm/dm/loteria-federal.svg) [![Build Status](https://secure.travis-ci.org/leonardothibes/loteria-federal.png)](http://travis-ci.org/leonardothibes/loteria-federal) [![Package Quality](http://npm.packagequality.com/shield/loteria-federal.svg)](http://packagequality.com/#?package=loteria-federal) [![License](https://img.shields.io/npm/l/loteria-federal.svg)](LICENSE)
 
-Consulta o resultado da última extração da loteria federal.
+Consulta o resultado do último concurso da loteria federal. A busca é integrada diretamente ao serviço da [Caixa Econômica Federal](http://www.caixa.gov.br).
 
-Installation
-------------
+Features
+--------
+
+* Sempre atualizado em tempo-real por se conectar diretamente ao serviço da Caixa
+* Sempre retorna a resposta mais rápida e mais atualizada por não usar fontes intermerdiárias
+* Sem limites de uso (rate limits) conhecidos
+* Interface de Promise extremamente simples
+
+Instalação
+----------
 
 ```bash
 npm install loteria-federal --save
 ```
 
-Examples
---------
-
-* [Some function](#some-function)
-
-Some function
+Como utilizar
 -------------
 
 ```js
-// Aqui vão os exemplos de uso.
+const loteria = require('loteria-federal');
+
+loteria.fetch()
+    .then(console.log);
+
+    // {
+    //    "concurso": "05251",
+    //    "data"    : "20/01/2018",
+    //    "premiacao": [
+    //        {
+    //            "premio": "1",
+    //            "numero": "58652",
+    //            "valor" : "700000.00"
+    //        },
+    //        {
+    //            "premio": "2",
+    //            "numero": "70.529",
+    //            "valor" : "28000.00"
+    //        },
+    //            "premio": "3",
+    //            "numero": "72.083",
+    //            "valor" : "26000.00"
+    //        },
+    //            "premio": "4",
+    //            "numero": "78.227",
+    //            "valor" : "22000.00"
+    //        },
+    //            "premio": "5",
+    //            "numero": "32.487",
+    //            "valor" : "20040.00"
+    //        }
+    //    "]
+    // }
 ```
 
-Test and development
---------------------
+Testes e desenvolvimento
+------------------------
 
 * Install external dependencies: **``npm install``**
 * Run the test suite without coverage: **``npm test``**
 * Run the test suite with coverage: **``npm run testdox``**
 
-How to Contribute
+Como contribuir
 -----------------
 
-* Open a pull request or an issue about what you want to implement / change. We're glad for any help!
-* Please be aware that we'll only accept fully tested code.
+* Abra uma issue no Github ou um Pull Request com o que você deseja alterar.
+* Só aceitamos código cujos testes estejam passando.
 
 Contributors
 ------------
