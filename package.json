@@ -56,7 +56,9 @@
       "desc": "Exibe esta mensagem de HELP"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "unirest": "^0.5.1"
+  },
   "devDependencies": {
     "istanbul": "^0.4.5",
     "jshint": "^2.9.5",
