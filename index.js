@@ -1,6 +1,16 @@
 'use strict';
 
 /**
+ * Retorna a lista de providers suportados.
+ *
+ * @return {Array}
+ */
+exports.providers = function()
+{
+    return ['caixa', 'g1'];
+};
+
+/**
  * Consulta o resultado.
  *
  * @param {String} provider
