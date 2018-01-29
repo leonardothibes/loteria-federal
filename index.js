@@ -24,7 +24,6 @@ exports.fetch = function(provider)
     try {
         return require('./lib/provider/' + provider).fetch();
     } catch (e) {
-        console.log('Provider não suportado: ' + provider);
-        throw new Error(e);
+        throw new Error('Provider não suportado: ' + provider);
     }
 };
