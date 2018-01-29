@@ -5,7 +5,6 @@ Thumbs.db
 .vagrant
 .settings
 .idea
-.vscode
 *.db
 *.bak
 *.swp
