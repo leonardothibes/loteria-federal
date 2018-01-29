@@ -1,5 +1,3 @@
-// Reference: http://jshint.com/docs/options
-// Problems: https://jslinterrors.com
 {
   "node": true,
   "strict": true,
@@ -12,7 +10,6 @@
   "esversion": 6,
   "globals": {
 
-    // Node.js
     "__dirname": true,
     "process": true,
     "global": true,
@@ -20,9 +17,7 @@
     "exports": true,
     "module": true,
     "console": true,
-    // Node.js
 
-    // Unit.js/Mocha
     "afterEach": false,
     "beforeEach": false,
     "describe": false,
@@ -31,6 +26,5 @@
     "after": false,
     "test": false,
     "it": false
-    // Unit.js/Mocha
   }
 }
