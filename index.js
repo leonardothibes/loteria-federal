@@ -7,7 +7,7 @@
  */
 exports.providers = function()
 {
-    return ['caixa', 'g1'];
+    return ['caixa', 'g1', 'uol'];
 };
 
 /**
