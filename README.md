@@ -27,6 +27,7 @@ loteria.fetch()
     .then(console.log);
 
     // {
+    //    "origem": "caixa",
     //    "concurso": "05251",
     //    "data"    : "20/01/2018",
     //    "premios" : [
