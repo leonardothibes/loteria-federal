@@ -7,7 +7,7 @@ describe('Entry-Point', () =>
 {
     it('Lista de providers', done =>
     {
-        assert.array(index.providers()).is(['caixa', 'g1']);
+        assert.array(index.providers()).is(['caixa', 'g1', 'uol']);
         done();
     });
 
