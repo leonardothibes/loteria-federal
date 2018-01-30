@@ -37,7 +37,7 @@ loteria.fetch('caixa') // default
     // {
     //    "origem"  : "caixa",
     //    "concurso": "05251",
-    //    "data"    : "20/01/2018",
+    //    "data"    : "2018-01-20",
     //    "premios" : [
     //        {
     //            "premio": "1",
@@ -81,7 +81,7 @@ loteria.fetch('uol')
     // {
     //    "origem"  : "uol",
     //    "concurso": "05251",
-    //    "data"    : "20/01/2018",
+    //    "data"    : "2018-01-20",
     //    "premios" : [
     //        {
     //            "premio": "1",
@@ -125,7 +125,7 @@ loteria.fetch('g1')
     // {
     //    "origem"  : "g1",
     //    "concurso": "05251",
-    //    "data"    : "20/01/2018",
+    //    "data"    : "2018-01-20",
     //    "premios" : [
     //        {
     //            "premio": "1",
