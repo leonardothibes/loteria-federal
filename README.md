@@ -5,8 +5,7 @@ Consulta o resultado do último concurso da loteria federal.
 Features
 --------
 
-* Sempre atualizado em tempo-real por se conectar diretamente ao serviço da Caixa
-* Sempre retorna a resposta mais rápida e mais atualizada por não usar fontes intermerdiárias
+* Sempre atualizado em tempo-real por se conectar diretamente a serviços como o da __Caixa__, e grandes portais como __Uol__ e __G1__.
 * Sem limites de uso (rate limits) conhecidos
 * Interface de Promise extremamente simples
 
@@ -20,14 +19,23 @@ npm install loteria-federal --save
 Como utilizar
 -------------
 
+* [Consulta Caixa](#consulta-caixa)
+* [Consulta Uol](#consulta-uol)
+* [Consulta G1](#consulta-g1)
+* [Lista Fontes](#lista-fontes)
+
+Consulta Caixa
+--------------
+
 ```js
 const loteria = require('loteria-federal');
 
-loteria.fetch()
-    .then(console.log);
+loteria.fetch('caixa') // default
+    .then(console.log),
+    .catch(console.log);
 
     // {
-    //    "origem": "caixa",
+    //    "origem"  : "caixa",
     //    "concurso": "05251",
     //    "data"    : "20/01/2018",
     //    "premios" : [
@@ -60,12 +68,117 @@ loteria.fetch()
     // }
 ```
 
+Consulta Uol
+------------
+
+```js
+const loteria = require('loteria-federal');
+
+loteria.fetch('uol')
+    .then(console.log),
+    .catch(console.log);
+
+    // {
+    //    "origem"  : "uol",
+    //    "concurso": "05251",
+    //    "data"    : "20/01/2018",
+    //    "premios" : [
+    //        {
+    //            "premio": "1",
+    //            "numero": "58652",
+    //            "valor" : "700000.00"
+    //        },
+    //        {
+    //            "premio": "2",
+    //            "numero": "70.529",
+    //            "valor" : "28000.00"
+    //        },
+    //        {
+    //            "premio": "3",
+    //            "numero": "72.083",
+    //            "valor" : "26000.00"
+    //        },
+    //        {
+    //            "premio": "4",
+    //            "numero": "78.227",
+    //            "valor" : "22000.00"
+    //        },
+    //        {
+    //            "premio": "5",
+    //            "numero": "32.487",
+    //            "valor" : "20040.00"
+    //        }
+    //    ]
+    // }
+```
+
+Consulta G1
+-----------
+
+```js
+const loteria = require('loteria-federal');
+
+loteria.fetch('g1')
+    .then(console.log),
+    .catch(console.log);
+
+    // {
+    //    "origem"  : "g1",
+    //    "concurso": "05251",
+    //    "data"    : "20/01/2018",
+    //    "premios" : [
+    //        {
+    //            "premio": "1",
+    //            "numero": "58652",
+    //            "valor" : "700000.00"
+    //        },
+    //        {
+    //            "premio": "2",
+    //            "numero": "70.529",
+    //            "valor" : "28000.00"
+    //        },
+    //        {
+    //            "premio": "3",
+    //            "numero": "72.083",
+    //            "valor" : "26000.00"
+    //        },
+    //        {
+    //            "premio": "4",
+    //            "numero": "78.227",
+    //            "valor" : "22000.00"
+    //        },
+    //        {
+    //            "premio": "5",
+    //            "numero": "32.487",
+    //            "valor" : "20040.00"
+    //        }
+    //    ]
+    // }
+```
+
+Lista Fontes
+------------
+
+```js
+const loteria = require('loteria-federal');
+
+const providers = loteria.providers();
+
+console.log(providers);
+
+    // [
+    //     'caixa',
+    //     'g1',
+    //     'uol'
+    // ]
+```
+
 Testes e desenvolvimento
 ------------------------
 
-* Install external dependencies: **``npm install``**
-* Run the test suite without coverage: **``npm test``**
-* Run the test suite with coverage: **``npm run testdox``**
+* Instalar dependências externas: **``npm install``**
+* Roda os testes sem relatório de coverage: **``npm test``**
+* Roda os testes com relatório de coverage: **``npm run testdox``**
 
 Como contribuir
 -----------------
