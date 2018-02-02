@@ -1,8 +1,9 @@
 'use strict';
 
-const fetcher = require('./lib/fetcher'),
-      path    = require('path'),
-      list    = require('list-dir');
+const fetcher   = require('./lib/fetcher'),
+      validator = require('./lib/validator'),
+      path      = require('path'),
+      list      = require('list-dir');
 
 /**
  * Retorna a lista de providers suportados.
@@ -34,3 +35,21 @@ exports.fetch = function(providerName)
         throw new Error(`Provider não suportado: ${providerName}`);
     }
 };
+
+/**
+ * Validação resumida do formato da consulta.
+ *
+ * @param {Object} body
+ *
+ * @return {Bool}
+ */
+exports.isValid = validator.isValid;
+
+/**
+ * Validação detalhada do formato da consulta.
+ *
+ * @param {Object} body
+ *
+ * @return {Object}
+ */
+exports.validate = validator.validate;

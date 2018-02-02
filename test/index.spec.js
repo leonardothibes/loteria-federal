@@ -71,4 +71,53 @@ describe('Entry-Point', () =>
             done();
         });
     });
+
+    it('Validação resumida', done =>
+    {
+        let body = {
+            origem  : 'caixa',
+            concurso: 5254,
+            data    : '2018-01-31',
+            premios :
+            [
+                { premio: 1, numero: '39332', valor: '350000.00' },
+                { premio: 2, numero: '01637', valor: '18000.00'  },
+                { premio: 3, numero: '18091', valor: '15000.00'  },
+                { premio: 4, numero: '14028', valor: '12000.00'  },
+                { premio: 5, numero: '51099', valor: '10023.00'  },
+            ]
+        };
+
+        let validation = index.isValid(body);
+        assert.bool(validation).isTrue();
+
+        done();
+    });
+
+    it('Validação detalhada', done =>
+    {
+        let body = {
+            origem  : 'caixa',
+            concurso: 5254,
+            data    : '2018-01-31',
+            premios :
+            [
+                { premio: 1, numero: '39332', valor: '350000.00' },
+                { premio: 2, numero: '01637', valor: '18000.00'  },
+                { premio: 3, numero: '18091', valor: '15000.00'  },
+                { premio: 4, numero: '14028', valor: '12000.00'  },
+                { premio: 5, numero: '51099', valor: '10023.00'  },
+            ]
+        };
+
+        let validation = index.validate(body);
+        assert.object(validation)
+            .hasProperty('valid')
+            .hasProperty('errors');
+
+        assert.bool(validation.valid).isTrue();
+        assert.array(validation.errors).hasLength(0);
+
+        done();
+    });
 });
