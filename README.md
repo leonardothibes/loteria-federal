@@ -179,6 +179,7 @@ Testes e desenvolvimento
 * Instalar dependências externas: **``npm install``**
 * Roda os testes sem relatório de coverage: **``npm test``**
 * Roda os testes com relatório de coverage: **``npm run testdox``**
+* Para mais opções: **``npm run help``**
 
 Como contribuir
 -----------------
