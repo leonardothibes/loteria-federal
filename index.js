@@ -1,7 +1,8 @@
 'use strict';
 
-const path = require('path'),
-      list = require('list-dir');
+const path    = require('path'),
+      list    = require('list-dir'),
+      fetcher = require('./lib/fetcher');
 
 /**
  * Retorna a lista de providers suportados.
@@ -16,17 +17,20 @@ exports.providers = function()
 /**
  * Consulta o resultado.
  *
- * @param {String} provider
+ * @param {String} providerName
  *
  * @return {Promise}
  */
-exports.fetch = function(provider)
+exports.fetch = function(providerName)
 {
-    provider = provider || 'caixa';
+    providerName = providerName || 'caixa';
 
     try {
-        return require('./lib/provider/' + provider).fetch();
+        const provider  = require(`./lib/provider/${providerName}`);
+        const formatter = require(`./lib/formatter/${providerName}`);
+
+        return fetcher.fetch(provider, formatter);
     } catch (e) {
-        throw new Error('Provider não suportado: ' + provider);
+        throw new Error(`Provider não suportado: ${providerName}`);
     }
 };
