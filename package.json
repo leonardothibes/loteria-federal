@@ -24,7 +24,7 @@
     "test": "clear ; ./node_modules/.bin/mocha test --recursive --reporter dot",
     "testdox": "clear ; ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test -- --recursive --reporter spec",
     "coverage": "[ -d coverage ] || npm run testdox ; google-chrome coverage/lcov-report/index.html",
-    "clean": "rm -Rf node_modules coverage .vscode *.log test.js",
+    "clean": "rm -Rf node_modules coverage *.log test.js",
     "postpublish": "git push origin master && git push --tags",
     "help": "npm-help"
   },
