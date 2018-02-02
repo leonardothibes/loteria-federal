@@ -1,8 +1,8 @@
 'use strict';
 
-const path    = require('path'),
-      list    = require('list-dir'),
-      fetcher = require('./lib/fetcher');
+const fetcher = require('./lib/fetcher'),
+      path    = require('path'),
+      list    = require('list-dir');
 
 /**
  * Retorna a lista de providers suportados.
