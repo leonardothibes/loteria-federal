@@ -1,5 +1,8 @@
 'use strict';
 
+const path = require('path'),
+      list = require('list-dir');
+
 /**
  * Retorna a lista de providers suportados.
  *
@@ -7,7 +10,7 @@
  */
 exports.providers = function()
 {
-    return ['caixa', 'g1', 'uol'];
+    return list.sync('./lib/provider').map(file => path.basename(file).replace('.js', ''));
 };
 
 /**
