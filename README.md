@@ -5,7 +5,7 @@ Consulta o resultado da loteria federal.
 Features
 --------
 
-* Sempre atualizado em tempo-real por se conectar diretamente a serviços como o da __Caixa__, e grandes portais como __Uol__ e __G1__.
+* Sempre atualizado em tempo-real por se conectar diretamente a serviços como o da __Caixa__, e grandes portais como __Uol__, __G1__ e __Estadão__.
 * Sem limites de uso (rate limits) conhecidos
 * Interface de Promise extremamente simples
 
@@ -22,6 +22,7 @@ Como utilizar
 * [Consulta Caixa](#consulta-caixa)
 * [Consulta Uol](#consulta-uol)
 * [Consulta G1](#consulta-g1)
+* [Consulta Estadao](#consulta-estadao)
 * [Lista Fontes](#lista-fontes)
 
 Consulta Caixa
@@ -156,6 +157,50 @@ loteria.fetch('g1')
     // }
 ```
 
+Consulta Estadao
+----------------
+
+```js
+const loteria = require('loteria-federal');
+
+loteria.fetch('estadao')
+    .then(console.log),
+    .catch(console.log);
+
+    // {
+    //    "origem"  : "estadao",
+    //    "concurso": "05251",
+    //    "data"    : "2018-01-20",
+    //    "premios" : [
+    //        {
+    //            "premio": "1",
+    //            "numero": "58652",
+    //            "valor" : "700000.00"
+    //        },
+    //        {
+    //            "premio": "2",
+    //            "numero": "70529",
+    //            "valor" : "28000.00"
+    //        },
+    //        {
+    //            "premio": "3",
+    //            "numero": "72083",
+    //            "valor" : "26000.00"
+    //        },
+    //        {
+    //            "premio": "4",
+    //            "numero": "78227",
+    //            "valor" : "22000.00"
+    //        },
+    //        {
+    //            "premio": "5",
+    //            "numero": "32487",
+    //            "valor" : "20040.00"
+    //        }
+    //    ]
+    // }
+```
+
 Lista Fontes
 ------------
 
@@ -168,6 +213,7 @@ console.log(providers);
 
     // [
     //     'caixa',
+    //     'estadao',
     //     'g1',
     //     'uol'
     // ]
