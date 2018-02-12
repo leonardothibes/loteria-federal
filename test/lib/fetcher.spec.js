@@ -26,24 +26,33 @@ describe('Fetcher', () =>
 
     it('Falha', done =>
     {
-        let formatter, provider = {
-            url    : 'http://localhost',
+        let provider = {
+            url    : 'https://www.google.com',
             headers: {
                 'Cache-Control': 'no-cache',
                 'cookie'       : 'security=true',
             }
         };
 
+        let formatter = {
+            body: () => {}
+        };
+
         let promise = fetcher.fetch(provider, formatter);
 
-        promise.catch(error =>
+        promise.catch(errors =>
         {
-            assert.object(error)
-                .hasProperty('status')
-                .hasProperty('message');
+            assert.array(errors);
 
-            assert.number(error.status);
-            assert.string(error.message);
+            errors.forEach(error =>
+            {
+                assert.object(error)
+                      .hasProperty('status')
+                      .hasProperty('message');
+
+                assert.number(error.status);
+                assert.string(error.message);
+            });
 
             done();
         });
