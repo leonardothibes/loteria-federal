@@ -32,7 +32,7 @@ Consulta Caixa
 const loteria = require('loteria-federal');
 
 loteria.fetch('caixa') // default
-    .then(console.log),
+    .then(console.log)
     .catch(console.log);
 
     // {
@@ -76,7 +76,7 @@ Consulta Uol
 const loteria = require('loteria-federal');
 
 loteria.fetch('uol')
-    .then(console.log),
+    .then(console.log)
     .catch(console.log);
 
     // {
@@ -120,7 +120,7 @@ Consulta G1
 const loteria = require('loteria-federal');
 
 loteria.fetch('g1')
-    .then(console.log),
+    .then(console.log)
     .catch(console.log);
 
     // {
@@ -164,7 +164,7 @@ Consulta Estadao
 const loteria = require('loteria-federal');
 
 loteria.fetch('estadao')
-    .then(console.log),
+    .then(console.log)
     .catch(console.log);
 
     // {
