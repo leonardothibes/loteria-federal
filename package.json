@@ -64,7 +64,7 @@
   "devDependencies": {
     "istanbul": "^0.4.5",
     "jshint": "^2.9.5",
-    "mocha": "^4.0.1",
+    "mocha": "^10.2.0",
     "npm-script-help": "^1.0.0",
     "unit.js": "^2.0.0"
   }
